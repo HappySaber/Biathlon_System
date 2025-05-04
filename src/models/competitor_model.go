@@ -3,7 +3,7 @@ package models
 import "time"
 
 type Competitor struct {
-	ID              int
+	ID              string
 	TotalTime       string // Общее время (или "NotStarted"/"NotFinished")
 	LapTimes        []string
 	LapAvgSpeeds    []float64
