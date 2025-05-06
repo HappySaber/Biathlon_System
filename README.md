@@ -1,5 +1,7 @@
 # Using
 - **go run src/cmd/main.go**
+- **Print 1 or 2 in console, depends on which file and events you want to check**
+- **All data will be printed in console**
 
 # System prototype for biathlon competitions
 The prototype must be able to work with a configuration file and a set of external events of a certain format.
