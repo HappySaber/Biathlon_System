@@ -1,7 +1,6 @@
 # Using
-<div style="border: 1px solid #ddd; background-color: #f8f8f8; padding: 10px; border-radius: 5px; color: #555;">
-go run src/cmd/main.go
-</div>
+**go run src/cmd/main.go
+
 # System prototype for biathlon competitions
 The prototype must be able to work with a configuration file and a set of external events of a certain format.
 Solution should contain golang (1.20 or newer) source file/files and unit tests (optional)
