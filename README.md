@@ -1,5 +1,5 @@
 # Using
-- **go run src/cmd/main.go
+- **go run src/cmd/main.go**
 
 # System prototype for biathlon competitions
 The prototype must be able to work with a configuration file and a set of external events of a certain format.
