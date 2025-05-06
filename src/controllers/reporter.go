@@ -69,7 +69,6 @@ func IsStratedInTime(record models.Event) bool {
 
 	models.CompetitorInfo[competitorID-1].ActualStart = StartTime
 	EdgeStartTime := models.CompetitorInfo[competitorID-1].ScheduledStart.Add(StartDelta)
-	fmt.Println(models.CompetitorInfo[competitorID-1].ActualStart, EdgeStartTime)
 	return !models.CompetitorInfo[competitorID-1].ActualStart.After(EdgeStartTime)
 }
 
