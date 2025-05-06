@@ -4,10 +4,14 @@ import "time"
 
 type Competitor struct {
 	ID              string
-	TotalTime       string // Общее время (или "NotStarted"/"NotFinished")
+	TotalTime       string
 	LapTimes        []string
+	LapStartTime    time.Time
+	CurrentLap      int
 	LapAvgSpeeds    []float64
-	PenaltyTime     string
+	PenaltyStart    time.Time
+	PenaltyDuration time.Duration
+	PenaltyTime     time.Time
 	PenaltyAvgSpeed float64
 	Hits            int
 	Shots           int

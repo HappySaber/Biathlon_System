@@ -8,3 +8,5 @@ type Config struct {
 	Start       string `json:"start"`
 	StartDelta  string `json:"startDelta"`
 }
+
+var Cfg Config

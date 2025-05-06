@@ -11,11 +11,11 @@ import (
 	"strings"
 )
 
-func ReadFromJSON() models.Config {
-	jsonFile, err := os.Open("sunny_5_skiers/config.json")
+func ReadFromJSON(fileName string) {
+	jsonFile, err := os.Open(fileName)
 
 	if err != nil {
-		log.Println(err)
+		log.Fatal(err)
 	}
 	fmt.Println("Successfully Opened config.json")
 	defer jsonFile.Close()
@@ -26,12 +26,11 @@ func ReadFromJSON() models.Config {
 
 	json.Unmarshal(byteValue, &config)
 
-	fmt.Println(config)
-	return config
+	models.Cfg = config
 }
 
-func ReadEvents() []models.Event {
-	file, err := os.Open("sunny_5_skiers/events")
+func ReadEvents(fileName string) []models.Event {
+	file, err := os.Open(fileName)
 	if err != nil {
 		log.Println(err)
 	}
@@ -60,14 +59,10 @@ func ReadEvents() []models.Event {
 			}
 		}
 		records = append(records, record)
-		fmt.Println(scanner.Text())
 	}
 	if err := scanner.Err(); err != nil {
 		fmt.Println("Ошибка чтения файла:", err)
 	}
 
-	// for i := range records {
-	// 	fmt.Println(records[i].CompetitorID)
-	// }
 	return records
 }
